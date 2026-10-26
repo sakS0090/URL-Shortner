@@ -24,7 +24,7 @@ url-shortener/
                    [Apply: Custom JWT Auth & Express-Rate-Limit]
                                       │
                                       ▼
-                        ⚡ Is Short URL Cached?
+                          Is Short URL Cached?
                                      / \
                                     /   \
                                Yes /     \ No
@@ -50,21 +50,6 @@ url-shortener/
 
 
 1.Using base62 encoding in order to avoid string collisions.
-
-
-
-
-// A sneak peek of how you'll fetch this in your controller tomorrow:
-const counter = await Counter.findByIdAndUpdate(
-    { _id: 'url_counter' },
-    { $inc: { seq: 1 } }, // Atomically increments the counter by 1
-    { new: true, upsert: true }
-);
-
-const nextId = counter.seq; // This becomes your numericId! (e.g., 1251924)
-
-
-
 
 ####################################################################################################################
 
